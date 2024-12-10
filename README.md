@@ -12,3 +12,9 @@ The HUD (Head Up Display) will be based on widgets, forming game background wind
 ![Alt text](/screenshots/screenshot2.png?raw=true "screenshot2")
 ![Alt text](/screenshots/screenshot3.png?raw=true "screenshot3")
 ![Alt text](/screenshots/fegui-layout.png?raw=true "fegui-layout")
+
+# Dependencies
+This project uses three shared libraries:
+Open Graphics Library (OpenGL)
+Chromium Embedded Framework (CEF)
+Bink SDK from Rad Game Tools (Bink)
