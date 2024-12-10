@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="fegui.dll"/>
+    <OBJFILES value="fegui_unit.obj application.obj bevel.obj bitmap.obj blend.obj brush.obj 
+      button.obj callback.obj canvas.obj checkbox.obj cmath.obj combobox.obj 
+      component.obj console.obj control.obj cstrings.obj cursors.obj dockbar.obj 
+      edit.obj ext_unit.obj filesystem.obj font.obj gfx.obj glyphbutton.obj 
+      graphiccontrol.obj graphicobject.obj groupbox.obj hint.obj icons.obj 
+      image.obj imagelist.obj keyboard.obj label.obj listbox.obj 
+      listscrollbar.obj listview.obj mainmenu.obj menu.obj mouse.obj msgbox.obj 
+      object.obj panel.obj pen.obj picture.obj png.obj progressbar.obj 
+      radiobutton.obj screen.obj scrollbar.obj shape.obj speedbutton.obj 
+      textbox.obj timer.obj toolbar.obj toolbutton.obj tooltip.obj trackbar.obj 
+      transparentbox.obj updown.obj videoplayer.obj viewport.obj wincontrol.obj 
+      window.obj webbrowser.obj"/>
+    <RESFILES value="fegui.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value="glaux.lib fewebkit.lib"/>
+    <LIBRARIES value="indy.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib indy.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi dclusr.bpi skinpackCB6.bpi DiskControlsCB6.bpi 
+      OpenWirePkgCB6.bpi SignalLabBasicPkgCB6.bpi SignalLabAdditionalPkgCB6.bpi 
+      TimingLabBasicPkgCB6.bpi AudioLabBasicPkgCB6.bpi MediaLabBasicPkgCB6.bpi 
+      VideoLabBasicPkgCB6.bpi VideoLabAdditionalPkgCB6.bpi 
+      SignalLabScopePkgCB6.bpi VideoLabPkgCB6.bpi IntelligenceLabBasicPkgCB6.bpi 
+      VisionLabPkgCB6.bpi IntelligenceLabPkgCB6.bpi SignalLabPkgCB6.bpi 
+      AudioLabEssentialPkgCB6.bpi AudioLabPkgCB6.bpi PlotLabPkgCB6.bpi 
+      speechkit4.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG;_FEGUI"/>
+    <SYSDEFINES value="NO_STRICT;_RTLDLL"/>
+    <MAINSOURCE value="fegui.bpf"/>
+    <INCLUDEPATH value="W:\tests\testchromium005;&quot;C:\Program Files (x86)\Borland\CBuilder6\Projects&quot;;C:\tests\testserver1;$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;&quot;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc&quot;;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\OpenWire;$(BCB)\LabPacks"/>
+    <LIBPATH value="W:\tests\testchromium005;&quot;C:\Program Files (x86)\Chant\SpeechKit 4.0\Developer\CBuilder\VCL6\Lib&quot;;&quot;C:\Program Files (x86)\Borland\CBuilder6\Projects&quot;;C:\tests\testserver1;$(BCB)\Projects\Lib;$(BCB)\lib\psdk;$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;&quot;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib&quot;;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\LabPacks;$(BCB)\LabPacks\IPPLib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-IW:\tests\testchromium005 
+      -I&quot;C:\Program Files (x86)\Borland\CBuilder6\Projects&quot; 
+      -IC:\tests\testserver1 -I$(BCB)\include -I$(BCB)\include\vcl -IC:\dlls 
+      -IC:\DynamicSkinForm.v560.FS -IC:\DiskControls\Sources -IC:\harmfade 
+      -IC:\hexedit\vcl -IC:\hexedit\vcl\BCB-6 -IC:\SynEdit -IC:\SynEdit\Source 
+      -IC:\fesys 
+      -I&quot;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc&quot; 
+      -IC:\Components\Graphics32 -IC:\Components\Graphics32\Packages 
+      -I$(BCB)\OpenWire -I$(BCB)\LabPacks -src_suffix cpp -D_DEBUG -D_FEGUI -boa"/>
+    <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- 
+      -tWD -tWM -c"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="fegui.res" FORMNAME="" UNITNAME="fegui.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="fegui.bpf" FORMNAME="" UNITNAME="fegui" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="fegui_unit.cpp" FORMNAME="" UNITNAME="fegui_unit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="application.cpp" FORMNAME="" UNITNAME="application.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bevel.cpp" FORMNAME="" UNITNAME="bevel.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bitmap.cpp" FORMNAME="" UNITNAME="bitmap.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="blend.cpp" FORMNAME="" UNITNAME="blend.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="brush.cpp" FORMNAME="" UNITNAME="brush.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="button.cpp" FORMNAME="" UNITNAME="button.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="callback.cpp" FORMNAME="" UNITNAME="callback.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="canvas.cpp" FORMNAME="" UNITNAME="canvas.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="checkbox.cpp" FORMNAME="" UNITNAME="checkbox.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cmath.cpp" FORMNAME="" UNITNAME="cmath.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="combobox.cpp" FORMNAME="" UNITNAME="combobox.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="component.cpp" FORMNAME="" UNITNAME="component.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="console.cpp" FORMNAME="" UNITNAME="console.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="control.cpp" FORMNAME="" UNITNAME="control.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cstrings.cpp" FORMNAME="" UNITNAME="cstrings.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cursors.cpp" FORMNAME="" UNITNAME="cursors.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dockbar.cpp" FORMNAME="" UNITNAME="dockbar.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="edit.cpp" FORMNAME="" UNITNAME="edit.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ext_unit.cpp" FORMNAME="" UNITNAME="ext_unit.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="filesystem.cpp" FORMNAME="" UNITNAME="filesystem.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="font.cpp" FORMNAME="" UNITNAME="font.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="gfx.cpp" FORMNAME="" UNITNAME="gfx.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="glyphbutton.cpp" FORMNAME="" UNITNAME="glyphbutton.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="graphiccontrol.cpp" FORMNAME="" UNITNAME="graphiccontrol.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="graphicobject.cpp" FORMNAME="" UNITNAME="graphicobject.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="groupbox.cpp" FORMNAME="" UNITNAME="groupbox.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="hint.cpp" FORMNAME="" UNITNAME="hint.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="icons.cpp" FORMNAME="" UNITNAME="icons.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="image.cpp" FORMNAME="" UNITNAME="image.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="imagelist.cpp" FORMNAME="" UNITNAME="imagelist.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="keyboard.cpp" FORMNAME="" UNITNAME="keyboard.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="label.cpp" FORMNAME="" UNITNAME="label.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="listbox.cpp" FORMNAME="" UNITNAME="listbox.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="listscrollbar.cpp" FORMNAME="" UNITNAME="listscrollbar.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="listview.cpp" FORMNAME="" UNITNAME="listview.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mainmenu.cpp" FORMNAME="" UNITNAME="mainmenu.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="menu.cpp" FORMNAME="" UNITNAME="menu.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mouse.cpp" FORMNAME="" UNITNAME="mouse.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="msgbox.cpp" FORMNAME="" UNITNAME="msgbox.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="object.cpp" FORMNAME="" UNITNAME="object.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="panel.cpp" FORMNAME="" UNITNAME="panel.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pen.cpp" FORMNAME="" UNITNAME="pen.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="picture.cpp" FORMNAME="" UNITNAME="picture.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png.cpp" FORMNAME="" UNITNAME="png.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="progressbar.cpp" FORMNAME="" UNITNAME="progressbar.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="radiobutton.cpp" FORMNAME="" UNITNAME="radiobutton.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="screen.cpp" FORMNAME="" UNITNAME="screen.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="scrollbar.cpp" FORMNAME="" UNITNAME="scrollbar.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="shape.cpp" FORMNAME="" UNITNAME="shape.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="speedbutton.cpp" FORMNAME="" UNITNAME="speedbutton.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="textbox.cpp" FORMNAME="" UNITNAME="textbox.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="timer.cpp" FORMNAME="" UNITNAME="timer.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="toolbar.cpp" FORMNAME="" UNITNAME="toolbar.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="toolbutton.cpp" FORMNAME="" UNITNAME="toolbutton.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tooltip.cpp" FORMNAME="" UNITNAME="tooltip.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="trackbar.cpp" FORMNAME="" UNITNAME="trackbar.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="transparentbox.cpp" FORMNAME="" UNITNAME="transparentbox.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="updown.cpp" FORMNAME="" UNITNAME="updown.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="videoplayer.cpp" FORMNAME="" UNITNAME="videoplayer.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="viewport.cpp" FORMNAME="" UNITNAME="viewport.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="wincontrol.cpp" FORMNAME="" UNITNAME="wincontrol.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="window.cpp" FORMNAME="" UNITNAME="window.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="glaux.lib" FORMNAME="" UNITNAME="glaux.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="webbrowser.cpp" FORMNAME="" UNITNAME="webbrowser" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="fewebkit.lib" FORMNAME="" UNITNAME="fewebkit.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=DSP Interactive
+FileDescription=Fast Engine Graphical User Interface
+FileVersion=1.0.0.0
+InternalName=fegui
+LegalCopyright=Copyright (C) 2014 DSP Interactive. All rights reserved.
+LegalTrademarks=Trademarks (TM) 2014 DSP Interactive. All rights reserved.
+OriginalFilename=fegui.dll
+ProductName=Fast Engine Graphical User Interface
+ProductVersion=1.0.0.0
+Comments=Fast Engine Graphical User Interface Library
+
+[Excluded Packages]
+c:\program files (x86)\borland\cbuilder6\Projects\Bpl\fecomponents.bpl=Fast Engine Components
+c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=9
+Item0=W:\tests\testchromium005;C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\OpenWire;$(BCB)\LabPacks
+Item1=C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\OpenWire;$(BCB)\LabPacks
+Item2=$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\OpenWire;$(BCB)\LabPacks
+Item3=$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages
+Item4=$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc
+Item5=$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys
+Item6=$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source
+Item7=$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources
+Item8=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=10
+Item0=W:\tests\testchromium005;C:\Program Files (x86)\Chant\SpeechKit 4.0\Developer\CBuilder\VCL6\Lib;C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BCB)\Projects\Lib;$(BCB)\lib\psdk;$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\LabPacks;$(BCB)\LabPacks\IPPLib
+Item1=C:\Program Files (x86)\Chant\SpeechKit 4.0\Developer\CBuilder\VCL6\Lib;C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BCB)\Projects\Lib;$(BCB)\lib\psdk;$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\LabPacks;$(BCB)\LabPacks\IPPLib
+Item2=C:\Program Files (x86)\Chant\SpeechKit 4.0\Developer\CBuilder\VCL6\Lib;C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\LabPacks;$(BCB)\LabPacks\IPPLib
+Item3=$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\LabPacks;$(BCB)\LabPacks\IPPLib
+Item4=$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages
+Item5=$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib
+Item6=$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys
+Item7=$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages
+Item8=$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources
+Item9=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=2
+Item0=_DEBUG;_FEGUI
+Item1=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

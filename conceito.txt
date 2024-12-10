@@ -1,0 +1,146 @@
+Um conceito utilizando parte do projeto FEGUI ( Fast Engine Graphical User Interface ) vai trazer novos recursos para o jogo.
+Janelas com viewports podem ser abertas simultaneamente.
+Depurador de núcleo poderá resolver problemas com erros ocorridos durante a execução do programa.
+O relatório de erros mostra detalhes da exceção ocorrida durante a violação de acesso ou outro tipo de erro causado.
+O console do jogo será nada mais do que um shell ( Terminal ), onde digita os comandos.
+O HUD ( Head Up Display ) será baseado em widgets, formando janelas de fundos do jogo. Irá ficar visivel sobre a janela do jogo.
+Exemplos de alguns HUDs que serão usados frequentemente conforme a lista abaixo:
+=======================================================
+Health
+Armor
+Ammo
+Weapon
+Inventory
+Team
+Squad
+Notice
+Alert
+Warning
+Information
+Tip
+Intra Message
+Inter Message
+Say
+Chat Message
+Good say
+Bad say
+Squad message
+Target
+Weapon target
+Crosshair
+Face recognition
+Object recognition
+Bobtrack
+Money
+Credits
+Now
+Bonus
+Face Detect
+Find object
+Danger
+Hazzard
+Body hurts
+Edge
+Contours
+Weapon view
+Houghlines
+Polar transforms
+Weapon bar
+People detect
+Object detect
+Haar detect
+Segment
+Tree segments
+Relationship information
+Environment information
+Map
+Radar map
+Winds rose
+Latitude information
+Longitude information
+Employ
+Job
+Train section
+Lovely information
+Dating message
+Idea
+New thinks
+Action information
+Mission track
+Mission information
+Failed message
+Failed mission message
+Failed information
+Police information
+Illegal message
+Fight view
+Fight information
+Fight message
+Troop information
+Troop message
+Troop view
+Troop
+Think generator information
+Think generator message
+Memory message
+Memory information
+Expression evaluation
+Aftermath
+Aftermath result
+Aftermath message
+Aftermath warning
+Aftermath error
+Inventory section
+Shield
+Shield protection
+Weapon message
+Weapon information
+Enemy information
+Enemy message
+Level information
+Current place
+Place information
+Stats
+Stats information
+Stats bar
+Shoot force
+Physical system
+Physical information
+Dump energy
+Energy bar
+Energy information
+Energy warning
+Energy message
+Radio station
+TV station
+Mobile
+Mobile information
+Need
+Need information
+Need message
+Wanted
+Wanted level
+Wanted message
+Wanted information
+Wanted bar
+Criminal message
+Hazzard warning
+Mission step
+Victory information
+Victory message
+Information message
+Fade in Text
+Fade out Text
+Player message
+Player information
+Player stats
+Player warning
+=======================================================
+Janelas semi-transparentes com cores (ciano/azul claro), amarelas, verdes.
+Estas janelas são HUDs baseados em widgets.
+Também podem conter três corês quando é usado em caso de bandeiras, avisos e estados de configurações.
+Neste caso, textos e logotipos usam corês de acordo com o resultado:
+Verde é para resultado positivo (OK)
+Amarelo é para resultado de aviso (Warning)
+Vermelho é para resultado de erro (Error)
+As janelas semi-transparentes ficam sem borda e podem ser arrastadas como estivessem no fundo.

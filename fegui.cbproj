@@ -1,0 +1,532 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B0A5C41F-D8BC-4C75-B355-CAE067B67E5C}</ProjectGuid>
+        <ProjectType>CppDynamicLibrary</ProjectType>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <FrameworkType>None</FrameworkType>
+        <ProjectVersion>15.1</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Library</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=DSP Interactive;FileDescription=Fast Engine Graphical User Interface;FileVersion=1.0.0.0;InternalName=fegui;LegalCopyright=Copyright (C) 2012 DSP Interactive. All rights reserved.;LegalTrademarks=Trademarks (TM) 2012 DSP Interactive. All rights reserved.;OriginalFilename=fegui.dll;ProductName=Fast Engine Graphical User Interface;ProductVersion=1.0.0.0;Comments=Fast Engine Graphical User Interface Library</VerInfo_Keys>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <BCC_PCHCache>true</BCC_PCHCache>
+        <TASM_IncludePath>C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BDS)\include;$(BDS)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BDS)\OpenWire;$(BDS)\LabPacks;$(TASM_IncludePath)</TASM_IncludePath>
+        <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+        <PackageImports>vcl.bpi;rtl.bpi;dbrtl.bpi;adortl.bpi;vcldb.bpi;vclx.bpi;bdertl.bpi;vcldbx.bpi;ibxpress.bpi;dsnap.bpi;dsnap.bpi;dsnapcon.bpi;teeui.bpi;teedb.bpi;tee.bpi;dss.bpi;dsnapcon.bpi;bcbsmp.bpi;vclie.bpi;xmlrtl.bpi;inet.bpi;inetdbbde.bpi;inetdbxpress.bpi;inetdb.bpi;webdsnap.bpi;bcbie.bpi;websnap.bpi;soaprtl.bpi;dbexpress.bpi;dbxcds.bpi;indycore.bpi;indysystem.bpi;bcboffice2k.bpi;dclusr.bpi;skinpackCB6.bpi;DiskControlsCB6.bpi;OpenWirePkgCB6.bpi;SignalLabBasicPkgCB6.bpi;SignalLabAdditionalPkgCB6.bpi;TimingLabBasicPkgCB6.bpi;AudioLabBasicPkgCB6.bpi;MediaLabBasicPkgCB6.bpi;VideoLabBasicPkgCB6.bpi;VideoLabAdditionalPkgCB6.bpi;SignalLabScopePkgCB6.bpi;VideoLabPkgCB6.bpi;IntelligenceLabBasicPkgCB6.bpi;VisionLabPkgCB6.bpi;IntelligenceLabPkgCB6.bpi;SignalLabPkgCB6.bpi;AudioLabEssentialPkgCB6.bpi;AudioLabPkgCB6.bpi;PlotLabPkgCB6.bpi;speechkit4.bpi;$(PackageImports)</PackageImports>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <DCC_AdditionalSwitches> -M</DCC_AdditionalSwitches>
+        <BRCC_IncludePath>C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BDS)\include;$(BDS)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BDS)\OpenWire;$(BDS)\LabPacks;$(BRCC_IncludePath)</BRCC_IncludePath>
+        <ILINK_AppType>Windows</ILINK_AppType>
+        <DCC_UnitSearchPath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <FinalOutputDir>.</FinalOutputDir>
+        <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+        <OutputExt>dll</OutputExt>
+        <ILINK_WinAppType>DLL</ILINK_WinAppType>
+        <AllPackageLibs>vcl.lib;rtl.lib;indycore.lib;indysystem.lib</AllPackageLibs>
+        <TASM_AdditionalSwitches> /w2</TASM_AdditionalSwitches>
+        <DynamicRTL>true</DynamicRTL>
+        <ILINK_LibraryPath>C:\tests\testserver1;$(BDS)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+        <BCC_IncludePath>C:\tests\testserver1;$(BDS)\include;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCC_IncludePath)</BCC_IncludePath>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <BRCC_Defines>_DEBUG;_FEGUI;$(BRCC_Defines)</BRCC_Defines>
+        <BCC_Defines>_FEGUI;$(BCC_Defines)</BCC_Defines>
+        <TASM_Defines>_DEBUG _FEGUI;$(TASM_Defines)</TASM_Defines>
+        <BCC_UserSuppliedOptions> -tWM -Vx -r- -k -tWD -Ve</BCC_UserSuppliedOptions>
+        <Icon_MainIcon>fegui_Icon2.ico</Icon_MainIcon>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <BCC_Defines>_FEGUI;$(BCC_Defines)</BCC_Defines>
+        <TASM_Defines>_DEBUG _FEGUI;$(TASM_Defines)</TASM_Defines>
+        <BRCC_Defines>_DEBUG;_FEGUI;$(BRCC_Defines)</BRCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
+        <DCC_AdditionalSwitches> -M -V</DCC_AdditionalSwitches>
+        <IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+        <ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+        <TASM_Debugging>Full</TASM_Debugging>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+        <BCC_UserSuppliedOptions> -tWM -Vx -r- -k -tWD -Ve -k</BCC_UserSuppliedOptions>
+        <LinkPackageStatics>vcl.lib;rtl.lib;indycore.lib;indysystem.lib</LinkPackageStatics>
+        <BCC_DisableWarnings>true</BCC_DisableWarnings>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=DSP Interactive;FileDescription=Fast Engine Graphical User Interface;FileVersion=1.0.0.0;InternalName=fegui;LegalCopyright=Copyright (C) 2013 DSP Interactive. All rights reserved.;LegalTrademarks=Trademarks (TM) 2013 DSP Interactive. All rights reserved.;OriginalFilename=fegui.dll;ProductName=Fast Engine Graphical User Interface;ProductVersion=1.0.0.0;Comments=Fast Engine Graphical User Interface Library</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <BCC_SelectedWarnings>false</BCC_SelectedWarnings>
+        <Manifest_File>None</Manifest_File>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <BCC_DisableWarnings>true</BCC_DisableWarnings>
+        <BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_AdditionalSwitches> -M -$O+</DCC_AdditionalSwitches>
+        <IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+        <BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
+        <TASM_Debugging>None</TASM_Debugging>
+        <ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+        <BCC_UserSuppliedOptions> -tWM -Vx -r- -k -tWD -Ve -r</BCC_UserSuppliedOptions>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <ItemGroup>
+        <CppCompile Include="application.cpp">
+            <BuildOrder>41</BuildOrder>
+            <BuildOrder>11</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="bevel.cpp">
+            <BuildOrder>42</BuildOrder>
+            <BuildOrder>14</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="bitmap.cpp">
+            <BuildOrder>47</BuildOrder>
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="blend.cpp">
+            <BuildOrder>48</BuildOrder>
+            <BuildOrder>20</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="brush.cpp">
+            <BuildOrder>45</BuildOrder>
+            <BuildOrder>23</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="button.cpp">
+            <BuildOrder>46</BuildOrder>
+            <BuildOrder>26</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="callback.cpp">
+            <BuildOrder>35</BuildOrder>
+            <BuildOrder>29</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="canvas.cpp">
+            <BuildOrder>36</BuildOrder>
+            <BuildOrder>32</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="checkbox.cpp">
+            <BuildOrder>35</BuildOrder>
+            <BuildOrder>33</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="cmath.cpp">
+            <BuildOrder>38</BuildOrder>
+            <BuildOrder>34</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="combobox.cpp">
+            <BuildOrder>41</BuildOrder>
+            <BuildOrder>39</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="component.cpp">
+            <BuildOrder>44</BuildOrder>
+            <BuildOrder>40</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="console.cpp">
+            <BuildOrder>47</BuildOrder>
+            <BuildOrder>37</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="control.cpp">
+            <BuildOrder>50</BuildOrder>
+            <BuildOrder>38</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="cstrings.cpp">
+            <BuildOrder>59</BuildOrder>
+            <BuildOrder>53</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="cursors.cpp">
+            <BuildOrder>60</BuildOrder>
+            <BuildOrder>56</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="dockbar.cpp">
+            <BuildOrder>59</BuildOrder>
+            <BuildOrder>57</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="edit.cpp">
+            <BuildOrder>62</BuildOrder>
+            <BuildOrder>58</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="ext_unit.cpp">
+            <BuildOrder>65</BuildOrder>
+            <BuildOrder>63</BuildOrder>
+        </CppCompile>
+        <None Include="fegui.otares"/>
+        <ResFiles Include="fegui.res">
+            <BuildOrder>43</BuildOrder>
+            <BuildOrder>2</BuildOrder>
+        </ResFiles>
+        <CppCompile Include="fegui_unit.cpp">
+            <BuildOrder>8</BuildOrder>
+            <BuildOrder>44</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="filesystem.cpp">
+            <BuildOrder>68</BuildOrder>
+            <BuildOrder>64</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="font.cpp">
+            <BuildOrder>71</BuildOrder>
+            <BuildOrder>61</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="gfx.cpp">
+            <BuildOrder>74</BuildOrder>
+            <BuildOrder>62</BuildOrder>
+        </CppCompile>
+        <None Include="glaux.lib">
+            <BuildOrder>21</BuildOrder>
+            <BuildOrder>197</BuildOrder>
+        </None>
+        <CppCompile Include="glyphbutton.cpp">
+            <BuildOrder>77</BuildOrder>
+            <BuildOrder>51</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="graphiccontrol.cpp">
+            <BuildOrder>80</BuildOrder>
+            <BuildOrder>52</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="graphicobject.cpp">
+            <BuildOrder>83</BuildOrder>
+            <BuildOrder>49</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="groupbox.cpp">
+            <BuildOrder>86</BuildOrder>
+            <BuildOrder>50</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="hint.cpp">
+            <BuildOrder>89</BuildOrder>
+            <BuildOrder>55</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="icons.cpp">
+            <BuildOrder>92</BuildOrder>
+            <BuildOrder>56</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="image.cpp">
+            <BuildOrder>95</BuildOrder>
+            <BuildOrder>53</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="imagelist.cpp">
+            <BuildOrder>98</BuildOrder>
+            <BuildOrder>54</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="keyboard.cpp">
+            <BuildOrder>32</BuildOrder>
+            <BuildOrder>101</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="label.cpp">
+            <BuildOrder>104</BuildOrder>
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="listbox.cpp">
+            <BuildOrder>11</BuildOrder>
+            <BuildOrder>107</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="listscrollbar.cpp">
+            <BuildOrder>8</BuildOrder>
+            <BuildOrder>110</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="listview.cpp">
+            <BuildOrder>9</BuildOrder>
+            <BuildOrder>113</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="mainmenu.cpp">
+            <BuildOrder>14</BuildOrder>
+            <BuildOrder>116</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="menu.cpp">
+            <BuildOrder>15</BuildOrder>
+            <BuildOrder>119</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="mouse.cpp">
+            <BuildOrder>122</BuildOrder>
+            <BuildOrder>12</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="msgbox.cpp">
+            <BuildOrder>13</BuildOrder>
+            <BuildOrder>125</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="object.cpp">
+            <BuildOrder>2</BuildOrder>
+            <BuildOrder>128</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="panel.cpp">
+            <BuildOrder>3</BuildOrder>
+            <BuildOrder>131</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="pen.cpp">
+            <BuildOrder>134</BuildOrder>
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="picture.cpp">
+            <BuildOrder>137</BuildOrder>
+            <BuildOrder>1</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="png.cpp">
+            <BuildOrder>6</BuildOrder>
+            <BuildOrder>140</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="progressbar.cpp">
+            <BuildOrder>7</BuildOrder>
+            <BuildOrder>143</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="radiobutton.cpp">
+            <BuildOrder>4</BuildOrder>
+            <BuildOrder>146</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="screen.cpp">
+            <BuildOrder>5</BuildOrder>
+            <BuildOrder>149</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="scrollbar.cpp">
+            <BuildOrder>26</BuildOrder>
+            <BuildOrder>152</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="shape.cpp">
+            <BuildOrder>27</BuildOrder>
+            <BuildOrder>155</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="speedbutton.cpp">
+            <BuildOrder>24</BuildOrder>
+            <BuildOrder>158</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="textbox.cpp">
+            <BuildOrder>25</BuildOrder>
+            <BuildOrder>161</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="timer.cpp">
+            <BuildOrder>30</BuildOrder>
+            <BuildOrder>164</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="toolbar.cpp">
+            <BuildOrder>31</BuildOrder>
+            <BuildOrder>167</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="toolbutton.cpp">
+            <BuildOrder>28</BuildOrder>
+            <BuildOrder>170</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="tooltip.cpp">
+            <BuildOrder>29</BuildOrder>
+            <BuildOrder>173</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="trackbar.cpp">
+            <BuildOrder>18</BuildOrder>
+            <BuildOrder>176</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="transparentbox.cpp">
+            <BuildOrder>19</BuildOrder>
+            <BuildOrder>179</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="updown.cpp">
+            <BuildOrder>182</BuildOrder>
+            <BuildOrder>16</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="videoplayer.cpp">
+            <BuildOrder>185</BuildOrder>
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="viewport.cpp">
+            <BuildOrder>22</BuildOrder>
+            <BuildOrder>188</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="wincontrol.cpp">
+            <BuildOrder>23</BuildOrder>
+            <BuildOrder>191</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="window.cpp">
+            <BuildOrder>20</BuildOrder>
+            <BuildOrder>194</BuildOrder>
+        </CppCompile>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1046</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">DSP Interactive</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription">Fast Engine Graphical User Interface</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName">fegui</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalCopyright">Copyright (C) 2012 DSP Interactive. All rights reserved.</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalTrademarks">Trademarks (TM) 2012 DSP Interactive. All rights reserved.</VersionInfoKeys>
+                    <VersionInfoKeys Name="OriginalFilename">fegui.dll</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductName">Fast Engine Graphical User Interface</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments">Fast Engine Graphical User Interface Library</VersionInfoKeys>
+                </VersionInfoKeys>
+                <ExcludedPackages>
+                    <ExcludedPackages Name="c:\program files (x86)\borland\cbuilder6\Projects\Bpl\fecomponents.bpl">Fast Engine Components</ExcludedPackages>
+                </ExcludedPackages>
+                <HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Count">8</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item0">C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\OpenWire;$(BCB)\LabPacks</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item1">$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\OpenWire;$(BCB)\LabPacks</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item2">$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Components\Graphics32;C:\Components\Graphics32\Packages</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item3">$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item4">$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source;C:\fesys</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item5">$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit\vcl;C:\hexedit\vcl\BCB-6;C:\SynEdit;C:\SynEdit\Source</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item6">$(BCB)\include;$(BCB)\include\vcl;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item7">$(BCB)\include;$(BCB)\include\vcl</HistoryLists_hlIncludePath>
+                </HistoryLists_hlIncludePath>
+                <HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Count">9</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item0">C:\Program Files (x86)\Chant\SpeechKit 4.0\Developer\CBuilder\VCL6\Lib;C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BCB)\Projects\Lib;$(BCB)\lib\psdk;$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\LabPacks;$(BCB)\LabPacks\IPPLib</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item1">C:\Program Files (x86)\Chant\SpeechKit 4.0\Developer\CBuilder\VCL6\Lib;C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\tests\testserver1;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\LabPacks;$(BCB)\LabPacks\IPPLib</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item2">$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages;$(BCB)\LabPacks;$(BCB)\LabPacks\IPPLib</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item3">$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Components\Graphics32;C:\Components\Graphics32\Packages</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item4">$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item5">$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages;C:\fesys</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item6">$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources;C:\harmfade;C:\hexedit;C:\hexedit\vcl;C:\SynEdit;C:\SynEdit\Source;C:\SynEdit\Packages</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item7">$(BCB)\lib\obj;$(BCB)\lib;C:\dlls;C:\DynamicSkinForm.v560.FS;C:\DiskControls\Sources</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item8">$(BCB)\lib\obj;$(BCB)\lib</HistoryLists_hlLibraryPath>
+                </HistoryLists_hlLibraryPath>
+                <HistoryLists_hlDebugSourcePath>
+                    <HistoryLists_hlDebugSourcePath Name="Count">1</HistoryLists_hlDebugSourcePath>
+                    <HistoryLists_hlDebugSourcePath Name="Item0">$(BCB)\source\vcl</HistoryLists_hlDebugSourcePath>
+                </HistoryLists_hlDebugSourcePath>
+                <HistoryLists_hlConditionals>
+                    <HistoryLists_hlConditionals Name="Count">2</HistoryLists_hlConditionals>
+                    <HistoryLists_hlConditionals Name="Item0">_DEBUG;_FEGUI</HistoryLists_hlConditionals>
+                    <HistoryLists_hlConditionals Name="Item1">_DEBUG</HistoryLists_hlConditionals>
+                </HistoryLists_hlConditionals>
+                <Debugging>
+                    <Debugging Name="DebugSourceDirs">$(BCB)\source\vcl</Debugging>
+                </Debugging>
+                <Parameters>
+                    <Parameters Name="RunParams"/>
+                    <Parameters Name="Launcher"/>
+                    <Parameters Name="UseLauncher">0</Parameters>
+                    <Parameters Name="DebugCWD"/>
+                    <Parameters Name="HostApplication"/>
+                    <Parameters Name="RemoteHost"/>
+                    <Parameters Name="RemotePath"/>
+                    <Parameters Name="RemoteLauncher"/>
+                    <Parameters Name="RemoteCWD"/>
+                    <Parameters Name="RemoteDebug">0</Parameters>
+                </Parameters>
+                <Compiler>
+                    <Compiler Name="ShowInfoMsgs">0</Compiler>
+                    <Compiler Name="LinkDebugVcl">0</Compiler>
+                    <Compiler Name="LinkCGLIB">0</Compiler>
+                </Compiler>
+                <CORBA>
+                    <CORBA Name="AddServerUnit">1</CORBA>
+                    <CORBA Name="AddClientUnit">1</CORBA>
+                    <CORBA Name="PrecompiledHeaders">1</CORBA>
+                </CORBA>
+                <ProjectProperties>
+                    <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+                    <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                </ProjectProperties>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\fmidesigner160.bpl">FMI Form designer and property and component editors</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp160.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </CPlusPlusBuilder.Personality>
+            <Platforms>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+</Project>
