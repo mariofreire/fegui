@@ -1,0 +1,220 @@
+# Project: fegui
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = fegui_private.res
+OBJ  = dllmain.o application.o bevel.o bitmap.o blend.o brush.o button.o callback.o canvas.o checkbox.o cmath.o combobox.o component.o console.o control.o cstrings.o cursors.o dockbar.o edit.o filesystem.o font.o gfx.o glyphbutton.o graphiccontrol.o graphicobject.o groupbox.o hint.o icons.o image.o imagelist.o keyboard.o label.o listbox.o listscrollbar.o listview.o mainmenu.o menu.o mouse.o msgbox.o object.o panel.o pen.o picture.o png.o progressbar.o radiobutton.o screen.o scrollbar.o shape.o speedbutton.o textbox.o timer.o toolbar.o toolbutton.o tooltip.o trackbar.o transparentbox.o updown.o videoplayer.o viewport.o wincontrol.o window.o $(RES)
+LINKOBJ  = dllmain.o application.o bevel.o bitmap.o blend.o brush.o button.o callback.o canvas.o checkbox.o cmath.o combobox.o component.o console.o control.o cstrings.o cursors.o dockbar.o edit.o filesystem.o font.o gfx.o glyphbutton.o graphiccontrol.o graphicobject.o groupbox.o hint.o icons.o image.o imagelist.o keyboard.o label.o listbox.o listscrollbar.o listview.o mainmenu.o menu.o mouse.o msgbox.o object.o panel.o pen.o picture.o png.o progressbar.o radiobutton.o screen.o scrollbar.o shape.o speedbutton.o textbox.o timer.o toolbar.o toolbutton.o tooltip.o trackbar.o transparentbox.o updown.o videoplayer.o viewport.o wincontrol.o window.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -lopengl32 -lglu32 -lglaux -lglut -luser32 -lkernel32 -lgdi32 -lwinmm -ladvapi32 --no-export-all-symbols --add-stdcall-alias ../Dev-Cpp/lib/libopengl32.a  -lgmon -pg  -g3 
+INCS =  -I"C:/Dev-Cpp/include"  -I"C:/dlls" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = fegui.dll
+CXXFLAGS = $(CXXINCS)   -pg -g3
+CFLAGS = $(INCS)   -pg -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before fegui.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=libfegui.def
+STATICLIB=libfegui.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+dllmain.o: dllmain.cpp
+	$(CPP) -c dllmain.cpp -o dllmain.o $(CXXFLAGS)
+
+application.o: application.cpp
+	$(CPP) -c application.cpp -o application.o $(CXXFLAGS)
+
+bevel.o: bevel.cpp
+	$(CPP) -c bevel.cpp -o bevel.o $(CXXFLAGS)
+
+bitmap.o: bitmap.cpp
+	$(CPP) -c bitmap.cpp -o bitmap.o $(CXXFLAGS)
+
+blend.o: blend.cpp
+	$(CPP) -c blend.cpp -o blend.o $(CXXFLAGS)
+
+brush.o: brush.cpp
+	$(CPP) -c brush.cpp -o brush.o $(CXXFLAGS)
+
+button.o: button.cpp
+	$(CPP) -c button.cpp -o button.o $(CXXFLAGS)
+
+callback.o: callback.cpp
+	$(CPP) -c callback.cpp -o callback.o $(CXXFLAGS)
+
+canvas.o: canvas.cpp
+	$(CPP) -c canvas.cpp -o canvas.o $(CXXFLAGS)
+
+checkbox.o: checkbox.cpp
+	$(CPP) -c checkbox.cpp -o checkbox.o $(CXXFLAGS)
+
+cmath.o: cmath.cpp
+	$(CPP) -c cmath.cpp -o cmath.o $(CXXFLAGS)
+
+combobox.o: combobox.cpp
+	$(CPP) -c combobox.cpp -o combobox.o $(CXXFLAGS)
+
+component.o: component.cpp
+	$(CPP) -c component.cpp -o component.o $(CXXFLAGS)
+
+console.o: console.cpp
+	$(CPP) -c console.cpp -o console.o $(CXXFLAGS)
+
+control.o: control.cpp
+	$(CPP) -c control.cpp -o control.o $(CXXFLAGS)
+
+cstrings.o: cstrings.cpp
+	$(CPP) -c cstrings.cpp -o cstrings.o $(CXXFLAGS)
+
+cursors.o: cursors.cpp
+	$(CPP) -c cursors.cpp -o cursors.o $(CXXFLAGS)
+
+dockbar.o: dockbar.cpp
+	$(CPP) -c dockbar.cpp -o dockbar.o $(CXXFLAGS)
+
+edit.o: edit.cpp
+	$(CPP) -c edit.cpp -o edit.o $(CXXFLAGS)
+
+filesystem.o: filesystem.cpp
+	$(CPP) -c filesystem.cpp -o filesystem.o $(CXXFLAGS)
+
+font.o: font.cpp
+	$(CPP) -c font.cpp -o font.o $(CXXFLAGS)
+
+gfx.o: gfx.cpp
+	$(CPP) -c gfx.cpp -o gfx.o $(CXXFLAGS)
+
+glyphbutton.o: glyphbutton.cpp
+	$(CPP) -c glyphbutton.cpp -o glyphbutton.o $(CXXFLAGS)
+
+graphiccontrol.o: graphiccontrol.cpp
+	$(CPP) -c graphiccontrol.cpp -o graphiccontrol.o $(CXXFLAGS)
+
+graphicobject.o: graphicobject.cpp
+	$(CPP) -c graphicobject.cpp -o graphicobject.o $(CXXFLAGS)
+
+groupbox.o: groupbox.cpp
+	$(CPP) -c groupbox.cpp -o groupbox.o $(CXXFLAGS)
+
+hint.o: hint.cpp
+	$(CPP) -c hint.cpp -o hint.o $(CXXFLAGS)
+
+icons.o: icons.cpp
+	$(CPP) -c icons.cpp -o icons.o $(CXXFLAGS)
+
+image.o: image.cpp
+	$(CPP) -c image.cpp -o image.o $(CXXFLAGS)
+
+imagelist.o: imagelist.cpp
+	$(CPP) -c imagelist.cpp -o imagelist.o $(CXXFLAGS)
+
+keyboard.o: keyboard.cpp
+	$(CPP) -c keyboard.cpp -o keyboard.o $(CXXFLAGS)
+
+label.o: label.cpp
+	$(CPP) -c label.cpp -o label.o $(CXXFLAGS)
+
+listbox.o: listbox.cpp
+	$(CPP) -c listbox.cpp -o listbox.o $(CXXFLAGS)
+
+listscrollbar.o: listscrollbar.cpp
+	$(CPP) -c listscrollbar.cpp -o listscrollbar.o $(CXXFLAGS)
+
+listview.o: listview.cpp
+	$(CPP) -c listview.cpp -o listview.o $(CXXFLAGS)
+
+mainmenu.o: mainmenu.cpp
+	$(CPP) -c mainmenu.cpp -o mainmenu.o $(CXXFLAGS)
+
+menu.o: menu.cpp
+	$(CPP) -c menu.cpp -o menu.o $(CXXFLAGS)
+
+mouse.o: mouse.cpp
+	$(CPP) -c mouse.cpp -o mouse.o $(CXXFLAGS)
+
+msgbox.o: msgbox.cpp
+	$(CPP) -c msgbox.cpp -o msgbox.o $(CXXFLAGS)
+
+object.o: object.cpp
+	$(CPP) -c object.cpp -o object.o $(CXXFLAGS)
+
+panel.o: panel.cpp
+	$(CPP) -c panel.cpp -o panel.o $(CXXFLAGS)
+
+pen.o: pen.cpp
+	$(CPP) -c pen.cpp -o pen.o $(CXXFLAGS)
+
+picture.o: picture.cpp
+	$(CPP) -c picture.cpp -o picture.o $(CXXFLAGS)
+
+png.o: png.cpp
+	$(CPP) -c png.cpp -o png.o $(CXXFLAGS)
+
+progressbar.o: progressbar.cpp
+	$(CPP) -c progressbar.cpp -o progressbar.o $(CXXFLAGS)
+
+radiobutton.o: radiobutton.cpp
+	$(CPP) -c radiobutton.cpp -o radiobutton.o $(CXXFLAGS)
+
+screen.o: screen.cpp
+	$(CPP) -c screen.cpp -o screen.o $(CXXFLAGS)
+
+scrollbar.o: scrollbar.cpp
+	$(CPP) -c scrollbar.cpp -o scrollbar.o $(CXXFLAGS)
+
+shape.o: shape.cpp
+	$(CPP) -c shape.cpp -o shape.o $(CXXFLAGS)
+
+speedbutton.o: speedbutton.cpp
+	$(CPP) -c speedbutton.cpp -o speedbutton.o $(CXXFLAGS)
+
+textbox.o: textbox.cpp
+	$(CPP) -c textbox.cpp -o textbox.o $(CXXFLAGS)
+
+timer.o: timer.cpp
+	$(CPP) -c timer.cpp -o timer.o $(CXXFLAGS)
+
+toolbar.o: toolbar.cpp
+	$(CPP) -c toolbar.cpp -o toolbar.o $(CXXFLAGS)
+
+toolbutton.o: toolbutton.cpp
+	$(CPP) -c toolbutton.cpp -o toolbutton.o $(CXXFLAGS)
+
+tooltip.o: tooltip.cpp
+	$(CPP) -c tooltip.cpp -o tooltip.o $(CXXFLAGS)
+
+trackbar.o: trackbar.cpp
+	$(CPP) -c trackbar.cpp -o trackbar.o $(CXXFLAGS)
+
+transparentbox.o: transparentbox.cpp
+	$(CPP) -c transparentbox.cpp -o transparentbox.o $(CXXFLAGS)
+
+updown.o: updown.cpp
+	$(CPP) -c updown.cpp -o updown.o $(CXXFLAGS)
+
+videoplayer.o: videoplayer.cpp
+	$(CPP) -c videoplayer.cpp -o videoplayer.o $(CXXFLAGS)
+
+viewport.o: viewport.cpp
+	$(CPP) -c viewport.cpp -o viewport.o $(CXXFLAGS)
+
+wincontrol.o: wincontrol.cpp
+	$(CPP) -c wincontrol.cpp -o wincontrol.o $(CXXFLAGS)
+
+window.o: window.cpp
+	$(CPP) -c window.cpp -o window.o $(CXXFLAGS)
+
+fegui_private.res: fegui_private.rc 
+	$(WINDRES) -i fegui_private.rc --input-format=rc -o fegui_private.res -O coff 
